@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../common/widgets/button/basic_app_button.dart';
 import '../../../core/configs/assets/app_images.dart';
 import '../../../core/configs/assets/app_vectors.dart';
+import '../../auth/pages/signup_or_signin.dart';
 import '../widgets/mode_container.dart';
 
 class ChooseModeScreen extends StatelessWidget {
@@ -71,7 +72,7 @@ class ChooseModeScreen extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            const ChooseModeScreen(),
+                            const SignupOrSigninScreen(),
                       ),
                     );
                   },
