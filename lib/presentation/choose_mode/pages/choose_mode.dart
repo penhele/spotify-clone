@@ -49,9 +49,17 @@ class ChooseModeScreen extends StatelessWidget {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ModeContainer(title: 'Dark Mode', icon: AppVectors.moon),
+                    ModeContainer(
+                      title: 'Dark Mode',
+                      icon: AppVectors.moon,
+                      themeMode: ThemeMode.dark,
+                    ),
                     SizedBox(width: 40),
-                    ModeContainer(title: 'Light Mode', icon: AppVectors.sun),
+                    ModeContainer(
+                      title: 'Light Mode',
+                      icon: AppVectors.sun,
+                      themeMode: ThemeMode.light,
+                    ),
                   ],
                 ),
 
