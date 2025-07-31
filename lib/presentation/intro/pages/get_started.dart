@@ -5,6 +5,7 @@ import '../../../common/widgets/button/basic_app_button.dart';
 import '../../../core/configs/assets/app_images.dart';
 import '../../../core/configs/assets/app_vectors.dart';
 import '../../../core/configs/theme/app_colors.dart';
+import '../../choose_mode/pages/choose_mode.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({super.key});
@@ -22,6 +23,12 @@ class GetStartedScreen extends StatelessWidget {
                 image: AssetImage(AppImages.introBG),
               ),
             ),
+          ),
+
+          Container(color: Colors.black.withValues(alpha: 0.15)),
+
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
             child: Column(
               children: [
                 Align(
@@ -51,12 +58,21 @@ class GetStartedScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                BasicAppButton(onPressed: () {}, title: 'Get Started'),
+                BasicAppButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const ChooseModeScreen(),
+                      ),
+                    );
+                  },
+                  title: 'Get Started',
+                ),
               ],
             ),
           ),
-
-          Container(color: Colors.black.withValues(alpha: 0.15)),
         ],
       ),
     );
